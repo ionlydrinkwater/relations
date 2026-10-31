@@ -1,24 +1,13 @@
 # Copilot Instructions
 
-## Project context
+Personal, website-first app for tracking family and friends (details and
+birthdays), usable on phones. See [PROJECT_PLAN.md](../PROJECT_PLAN.md).
 
-This project is a personal tool for keeping track of family and friends,
-including important details and birthdays. It is a website-first app intended
-to work well on phones. Follow the project decisions in
-[PROJECT_PLAN.md](../PROJECT_PLAN.md).
-
-## Working in this repository
-
-- Use SvelteKit and TypeScript. Persist data in PostgreSQL, accessed only from
-  server code, with Google sign-in via Auth.js. Scope every query to the
-  signed-in user.
-- Everything must run locally in Docker containers; keep secrets in untracked
-  environment files and never commit them.
-- Keep the UI responsive and usable on small phone screens.
-- Keep changes focused on the project goals and update related documentation
-  when behavior or setup changes.
-- Add or update tests for behavior changes and run the relevant checks available
-  in the repository.
-- Treat personal information with care: collect and expose only what a feature
-  needs, and avoid adding real personal data to source, tests, or examples.
-- Do not promise backups for data in the local Docker database volume.
+- Use SvelteKit and TypeScript; keep the UI responsive on small screens.
+- Use PostgreSQL from server code only, with Google sign-in via Auth.js.
+  Scope every query to the signed-in user.
+- Everything runs locally in Docker; never commit secrets.
+- Keep changes focused, update related docs, and add or run tests for behavior
+  changes.
+- Treat personal data with care: collect only what's needed and use no real
+  personal data in source, tests, or examples.
